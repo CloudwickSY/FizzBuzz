@@ -1,4 +1,3 @@
-
 /**
  * FuzzBuzz class is a class that contains an implementation of the fizzBuzz algorithm 
  * For multiples of three print “Fizz” instead of the number
@@ -12,7 +11,7 @@ public class FuzzBuzz {
 	/**
 	 * 
 	 * @param number the value for which we need to compute fizzBuzz
-	 * @return
+	 * @return the fizzBuzz string for the input
 	 */
 	public String version1(int number) {
 		String result = fizzBuzz[(number%3==0?1:0)+(number%5==0?2:0)];
@@ -28,6 +27,3 @@ public class FuzzBuzz {
 		return result.isEmpty()?(number+""):result;
 	}
 }
-
-
-

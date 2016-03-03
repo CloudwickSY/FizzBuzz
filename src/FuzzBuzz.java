@@ -8,7 +8,7 @@
  *
  */
 public class FuzzBuzz {
-	private static String[] fizzBuzz = {"","Fizz","Buzz","Fizzbuzz"};
+	private static String[] fizzBuzz = {"","Fizz","Buzz","FizzBuzz"};
 	/**
 	 * 
 	 * @param number the value for which we need to compute fizzBuzz

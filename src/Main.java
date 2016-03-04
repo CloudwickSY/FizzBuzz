@@ -9,19 +9,32 @@ public class Main {
 		for (int number = 1; number <= 100; number++) {
 			System.out.println(fuzzBuzz.version2(number));
 		}
-
-		/* Create a scanner so that we can read from the user */
-		System.out.println("Please provide with a positive intiger.\nNegative intiger will terminate the loop");
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();// To do: Verify user input
+		int num = ReadNum();
 		while (num > 0) {// Iterate until the user gives a negative number
 			System.out.println(fuzzBuzz.version2(num));
-			System.out.println(
-					"~~~~~~~~~~~~~\nPlease provide with a positive intiger.\nNegative intiger will terminate the loop");
-			num = in.nextInt();
+			num = ReadNum();
+		}
+		System.out.println("Thank you for playing. Please come again.");
+	}
+
+	/**
+	 * This function reads an integer from input
+	 * and handles input mismatch.
+	 * @return an integer read from console
+	 */
+	public static int ReadNum() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please provide with a positive intiger.\nNegative intiger will terminate the loop");
+		int num = in.nextInt();
+		try {
+			num = in.nextInt();// To do: Verify user input
+		} catch (java.util.InputMismatchException e) { // Catch imput missmatch Exception
+			System.out.println("Invalid input :( . Please provide an integer.");
+			num = ReadNum();
+		}finally{
+			//do nothing
 		}
 		in.close();
-		System.out.println("Thank you for playing. Please come again.");
-
+		return num;
 	}
 }

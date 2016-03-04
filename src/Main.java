@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.FilterInputStream;
 import java.util.InputMismatchException;
 
 public class Main {
@@ -27,7 +28,9 @@ public class Main {
 	 * @return an integer read from console
 	 */
 	public static int ReadNum() {
-		Scanner in = new Scanner(System.in);
+		//Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(new FilterInputStream(System.in){public void close(){}});
+		in.reset();
 		System.out.println("Please provide with a positive intiger.\nNegative intiger will terminate the loop");
 		int num;
 		try {
@@ -37,8 +40,9 @@ public class Main {
 			num = ReadNum();
 		}finally{
 			//do nothing
-			//in.close();
+			//
 		}
+		in.close();
 		return num;
 	}
 }

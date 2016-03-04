@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main {
 	public static void main(String[] argv) {
@@ -25,10 +26,10 @@ public class Main {
 	public static int ReadNum() {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Please provide with a positive intiger.\nNegative intiger will terminate the loop");
-		int num = in.nextInt();
+		int num;
 		try {
 			num = in.nextInt();// To do: Verify user input
-		} catch (java.util.InputMismatchException e) { // Catch imput missmatch Exception
+		} catch (InputMismatchException e) { // Catch imput missmatch Exception
 			System.out.println("Invalid input :( . Please provide an integer.");
 			num = ReadNum();
 		}finally{

@@ -29,7 +29,7 @@ public class Main {
 		int num;
 		try {
 			num = in.nextInt();// To do: Verify user input
-		} catch (InputMismatchException e) { // Catch imput missmatch Exception
+		} catch (InputMismatchException e) { // Catch input mismatch Exception
 			System.out.println("Invalid input :( . Please provide an integer.");
 			num = ReadNum();
 		}finally{

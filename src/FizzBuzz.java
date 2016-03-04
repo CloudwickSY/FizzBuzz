@@ -6,7 +6,7 @@
  * @author Stanislav
  *
  */
-public class FuzzBuzz {
+public class FizzBuzz {
 	private static String[] fizzBuzz = {"","Fizz","Buzz","FizzBuzz"};
 	/**
 	 * 

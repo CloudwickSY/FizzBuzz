@@ -3,13 +3,16 @@ import java.util.InputMismatchException;
 
 public class Main {
 	public static void main(String[] argv) {
+		//Exmaple 1
 		FizzBuzz fuzzBuzz = new FizzBuzz();
 		for (int number = 1; number <= 100; number++) {
 			System.out.println(fuzzBuzz.version1(number));
 		}
+		//Example 2
 		for (int number = 1; number <= 100; number++) {
 			System.out.println(fuzzBuzz.version2(number));
 		}
+		//Example 3
 		int num = ReadNum();
 		while (num > 0) {// Iterate until the user gives a negative number
 			System.out.println(fuzzBuzz.version2(num));
@@ -34,6 +37,7 @@ public class Main {
 			num = ReadNum();
 		}finally{
 			//do nothing
+			//in.close();
 		}
 		return num;
 	}

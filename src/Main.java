@@ -35,7 +35,6 @@ public class Main {
 		}finally{
 			//do nothing
 		}
-		in.close();
 		return num;
 	}
 }
